@@ -22,6 +22,7 @@ function App() {
       //Looks in which inpustfield we are by name and give the value to the matching target
       [event.target.name]: event.target.value,
     });
+    //The consoleLog is used to emulate a controlled handling
     console.log(user.firstname);
     console.log(user.lastname);
   };
@@ -33,7 +34,9 @@ function App() {
           Frirst Name:
           <input
             type="text"
+            //the name is for the matching to the key in users object in the state
             name="firstname"
+            //the value is set to the key in users object in the state
             value={user.firstname}
             onChange={handleChange}
           />
